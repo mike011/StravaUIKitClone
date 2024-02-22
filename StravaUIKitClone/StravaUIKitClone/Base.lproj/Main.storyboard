@@ -19,11 +19,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sKq-W5-1I0"/>
                         <segue destination="Oph-7u-j9O" kind="relationship" relationship="viewControllers" id="FTO-e5-dEa"/>
                         <segue destination="HJS-Au-t1e" kind="relationship" relationship="viewControllers" id="TyN-Dl-8Ql"/>
                         <segue destination="mU8-z5-k9g" kind="relationship" relationship="viewControllers" id="yku-s7-qUB"/>
                         <segue destination="XgQ-GT-XNP" kind="relationship" relationship="viewControllers" id="tcq-V6-t8h"/>
+                        <segue destination="fP8-aG-ARW" kind="relationship" relationship="viewControllers" id="YD1-HJ-Gfs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYV-gb-ULL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -31,20 +31,33 @@
             <point key="canvasLocation" x="2558" y="-849"/>
         </scene>
         <!--Home-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="Mva-P2-5zd">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StravaUIKitClone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="fP8-aG-ARW" userLabel="Home" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lEV-zn-hsh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="ZW9-EQ-sj5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vBM-Ik-XoR">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vBM-Ik-XoR" id="wjC-Un-HjV">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fP8-aG-ARW" id="LsL-rx-yDz"/>
+                            <outlet property="delegate" destination="fP8-aG-ARW" id="GPC-Ks-WuW"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="Re9-sy-vj2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLD-Z6-27x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017.5572519083969" y="24.647887323943664"/>
+            <point key="canvasLocation" x="989" y="26"/>
         </scene>
         <!--Maps-->
         <scene sceneID="vxs-K4-d5K">
